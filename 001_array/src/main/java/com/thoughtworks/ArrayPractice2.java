@@ -1,5 +1,7 @@
 package com.thoughtworks;
 
+import java.util.Arrays;
+
 public class ArrayPractice2 {
 
     /**
@@ -7,8 +9,17 @@ public class ArrayPractice2 {
      */
     public static int[] exchange() {
         int[] array = new int[]{10, 8, 1, 7, 0, 20, 16, 19};
-
-
-        return null;
+        int max = array[0];
+        int switchLocation = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                switchLocation = i;
+            }
+        }
+        int tmp = array[switchLocation];
+        array[switchLocation] = array[0];
+        array[0] = tmp;
+        return array;
     }
 }

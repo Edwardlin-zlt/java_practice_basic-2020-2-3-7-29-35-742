@@ -13,12 +13,11 @@ public class ArrayPractice3 {
             }
         }
         int[] newArray = new int[array.length - countZero];
-        for (int i = 0; i < newArray.length; i++) {
-            for (int value : array) {
-                if (value != 0) {
-                    continue;
-                }
+        int i = 0;
+        for (int value : array) {
+            if (value != 0) {
                 newArray[i] = value;
+                i++;
             }
         }
         return newArray;

@@ -11,7 +11,7 @@ public class ArrayPractice2 {
         int[] array = new int[]{10, 8, 1, 7, 0, 20, 16, 19};
         int max = array[0];
         int switchLocation = 0;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
                 switchLocation = i;
